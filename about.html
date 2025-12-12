@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+
+</head>
+<body onload="checkLogin()">
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+</body>
+</html>
+
+<h1>About Me</h1>
+<!-- Profile Image -->
+
+   
+<!-- Introduction -->
+<section style="max-width:800px; margin:30px auto; font-size:18px; line-height:1.6;">
+    <h2 style="text-align:center;">Hello, I'm <b>Tanu Mishra</b></h2>
+
+    <p>
+        I’m an aspiring painter who loves exploring colors, brush strokes, and creative ideas.
+        Painting is special to me because <b>it helps me express emotions</b> in a way words sometimes cannot.
+        Even though I am still learning, every artwork I create teaches me something new and helps me grow 
+        as an artist. My goal is to continue improving my skills and create paintings that reflect my feelings, 
+        imagination, and passion for art.
+    </p>
+</section>
+
+<!-- Achievements -->
+<section style="max-width:800px; margin:40px auto;">
+    <h2>Achievements</h2>
+    <ul style="margin-top:10px; line-height:1.8;">
+        <li>Participated in multiple school and college art events</li>
+        <li>Created paintings based on nature and emotional expression</li>
+        <li>Continuously learning new painting techniques</li>
+    </ul>
+</section>
+
+<!-- Art Style -->
+<section style="max-width:800px; margin:40px auto;">
+    <h2>My Art Style</h2>
+    <p style="margin-top:10px; line-height:1.6;">
+        My paintings are often inspired by emotions, nature, and color expression. I enjoy mixing shades 
+        and experimenting with brush techniques to create soft and meaningful visuals. I aim to create 
+        artwork that connects with people emotionally.
+    </p>
+</section>
+
+<!-- Events & Exhibitions -->
+<section style="max-width:800px; margin:40px auto;">
+    <h2>Events & Exhibitions</h2>
+    <ul style="margin-top:10px; line-height:1.8;">
+        <li>Displayed artwork in college art activities</li>
+        <li>Participated in local creativity festivals</li>
+    </ul>
+</section>
+
+<!-- Goals Section -->
+<section style="max-width:800px; margin:40px auto;">
+    <h2>My Goals</h2>
+    <ul style="margin-top:10px; line-height:1.8;">
+        <li>Improve and refine my painting techniques</li>
+        <li>Create deeper, emotion-based artworks</li>
+        <li>Explore new painting styles and mediums</li>
+        <li>Build a strong personal art portfolio</li>
+        <li>Participate in more exhibitions and art events</li>
+    </ul>
+</section>
+
+
+
+
+
+<script>
+function checkLogin(){
+    if(localStorage.getItem("loggedIn") !== "true"){
+        window.location.href = "login.html";
+    }
+}
+
+function logout(){
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
+

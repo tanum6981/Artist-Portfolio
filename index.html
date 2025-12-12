@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkLogin()">
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" onclick="logout()">Logout</a>
+</nav>
+
+<h1>Welcome to My Artist Portfolio</h1>
+<p style="text-align:center;">Explore my artwork and creativity.</p>
+<img src="HOME.webp" style="width: 100%; height: auto;">
+
+<script>
+function checkLogin(){
+    if(localStorage.getItem("loggedIn") !== "true"){
+        window.location.href = "login.html";
+    }
+}
+
+function logout(){
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+
+    <style>
+        body {
+            background: url("Background img.avif") no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-box {
+            background: rgba(202, 121, 125, 0.582);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            width: 320px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .signup-box input,
+        .signup-box button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .signup-box button {
+            background: #222;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .signup-box button:hover {
+            background: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-box">
+        <h2>Create Account</h2>
+
+        <input id="newUser" placeholder="Create a Username">
+        <input id="newPass" type="password" placeholder="Create a Password">
+
+        <button onclick="createAccount()">Sign Up</button>
+    </div>
+
+<script>
+function createAccount() {
+    let username = document.getElementById("newUser").value;
+    let password = document.getElementById("newPass").value;
+
+    if(username === "" || password === "") {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    // Save user details
+    localStorage.setItem("savedUser", username);
+    localStorage.setItem("savedPass", password);
+
+    alert("Account created successfully!");
+
+    // Redirect to login page
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
